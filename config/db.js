@@ -3,7 +3,7 @@ var config = {
         engine:'mysql',
         database:'product',
         username:'root',
-        password:'',
+        password:'Mandriva2012',
         host:'localhost',
           
 }

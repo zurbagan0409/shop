@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var Sequelize = require('sequelize');
 var db = require('../models/dbs.js');
-var database = new db('localhost', 'root', 'Mandriva2012', 'warehouse');
+var database = new db();
+database.con.sync();
 var sess;
 var bcrypt = require('bcrypt');
 // var app.use(express.bodyParser());
@@ -11,12 +12,8 @@ var session = require('express-session');
 // initalize sequelize with session store dd
 var SequelizeStore = require('connect-session-sequelize')(session.Store);
 
- var connection = new Sequelize('warehouse', 'root', 'Mandriva2012',{
- dialect: 'mysql'
- });
 var us1;
 var sess;
-connection.sync();
 
 router.get('/', (req,res,next) => {
 //  res.render('index', { title: 'Express' });
