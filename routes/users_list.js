@@ -2,7 +2,12 @@ var express = require('express');
 var router = express.Router();
 var Sequelize = require('sequelize');
 var db = require('../models/dbs.js');
+<<<<<<< HEAD
 var database = new db('localhost', 'root', 'admin', 'warehouses');
+=======
+var database = new db();
+database.con.sync();
+>>>>>>> ee0c3e1747b651db2b8fe13d3db6e5ce95ea3741
 var sess;
 var bcrypt = require('bcrypt');
 // var app.use(express.bodyParser());
@@ -23,6 +28,7 @@ function(req, res) {
   console.log(user_id_del);
   database.Users.destroy(
         {  where: {id:user_id_del}}
+<<<<<<< HEAD
       )
 	.then(function (deletedRecord) {
 
@@ -43,6 +49,15 @@ function(req, res) {
 
 
 
+=======
+      ).then(function(err){
+        if (err)
+        //    res.status(500).send(err);
+        res.sendStatus(500).send(err);
+        else
+            res.redirect('/users_list')
+    });
+>>>>>>> ee0c3e1747b651db2b8fe13d3db6e5ce95ea3741
 });
  
 module.exports = router;

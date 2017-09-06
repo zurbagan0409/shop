@@ -89,7 +89,10 @@
   .main-finder__input--style {
     outline: none;
     color: #000;
+<<<<<<< HEAD
     border-radius: 5px;
+=======
+>>>>>>> ee0c3e1747b651db2b8fe13d3db6e5ce95ea3741
     background: url("../img/find_icon.jpg") #EDEEF2 no-repeat;
     background-size: 20px 20px;
     background-position: 5px center;
@@ -1645,8 +1648,12 @@ p,
 .text--menu {
   line-height: 70px;
   height: 70px;
+<<<<<<< HEAD
   text-align: center;
   padding: 0; }
+=======
+  text-align: center; }
+>>>>>>> ee0c3e1747b651db2b8fe13d3db6e5ce95ea3741
   .text--menu--text {
     line-height: 1.5;
     display: inline-block;
