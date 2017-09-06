@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Склад</title>
+	
+		
+	<link href="/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="/normalize.css" rel="stylesheet" type="text/css">
+    <link href="/style.min.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+        
+
+</head>
+<body class="page">
+<form action="/build" method="post">
+	<div class="main-finder page__main-finder main-finder--style-first">
+		<div class="text-faded">
+			<h4 class="menu-left">Алматы</h4>
+			<div class="finder-input-wrapper">
+				<h4 style="float: left;">Магазины</h4>
+				<h4 class="menu-left">Покупателям</h4>
+				<h4 class="menu-left">Наши проекты</h4>
+			</div>
+			<a href="#" id="opener"><h4 class="menu-right">Войти</h4></a>
+			<h4 class="menu-right">Регистрация</h4>
+			<h4 class="menu-right">Русский</h4>
+		</div>
+	</div>
+	<div class="main-finder page__main-finder main-finder--style">
+		<a href="index.php"><img src="icon.png" class="menu-left" alt=""></a>
+		<div class="finder-input-wrapper main-finder--style--icon">
+			<form action="" class="finder-form finder-form--style">
+				<center><input type="text" class="finder-input main-finder__input main-finder__input--style" style="float: left" placeholder="Поиск"></center>
+			</form>
+			<a href="temp.php"><button class="menu-right" style="background-color:#a1a7b3;"><h4>Корзина</h4></button></a>
+		</div>
+	</div>
+	
+	<div class="main-finder main-finder--style-third col-md-12">
+		<div class="text-faded">
+			<ul class="menu-list main-nav__menu-list">
+				<li class="col-mdm-2 text--menu text--menu">
+					<a href="/build?cat=5">
+						<h4 class="text--center text--menu--text">Стройматериалы</h4>
+					</a>
+				</li>
+				<li class="col-mdm-2 border-left text--menu">
+					<a href="/build?cat=9">
+						<h4 class="text--center text--menu--text">Электротовары</h4>
+					</a>
+				</li>
+				<li class="col-mdm-2 border-left text--menu">
+					<a href="/build?cat=5">
+						<h4 class="text--center text--menu--text">Инструменты</h4>
+					</a>
+				</li>
+				<li class="col-mdm-2 border-left text--menu" >
+					<a href="/build?cat=5">
+						<h4 class="text--center text--menu--text">Отделочные материалы</h4>
+					</a>
+				</li>
+				<li class="col-mdm-2 border-left text--menu" >
+					<a href="/build?cat=9">
+					<h4 class="text--center text--menu--text">Столярные изделия</h4>
+					</a>
+				</li>
+				<li class="col-mdm-2 border-left text--menu" >
+					<a href="/build?cat=9">
+						<h4 class="text--center text--menu--text">Водоснабжение и канализация</h4>
+					</a>
+				</li>	
+				<li class="col-mdm-2 border-left text--menu" >
+					<a href="/build?cat=9">
+						<h4 class="text--center text--menu--text">Отопление и вентиляция</h4>
+					</a>
+				</li>
+				<li class="col-mdm-2 border-left text--menu" >
+					<a href="/build?cat=9">
+						<h4 class="text--center text--menu--text">Выбор по бренду</h4>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+
+		<main class="main page__main main--style clearfix">
+
+			
+
+			      
+				<div id="<%'tab'+tabb%>" class="tab tab-content__tab tab-content__tab--style tab--active " style="border:0px;">
+					
+						<div class="row income-wrapper__row clearfix page">
+							<div class="main-finder col-md-12">
+								<div class="text--blue text--center">
+									<div style="margin-bottom:3%; ">
+									</div>							
+									<%for(i=0;i<category.length;i++){%>
+											<%for(j=0;j<subcat.length;j++){%>
+												<%if((category[i].id==subcat[j].subcat_id)&&(subcat[j].category_id==tabb)){%>	
+													<div class="col-md-2" style="margin-bottom: 50px;">
+														<a <%='href=/category?prod='+category[i].id%> >
+															<div class="menu-item__image-position">
+																<img src="catalogue/1.png" alt="Документы" class="menu-item__image menu-item__image--style">
+																<br>
+																<h5 class="text--center"><%=category[i].name %></h5><br>
+															</div>
+														</a>
+														<a <%='href=/category?prod='+category[i].id%> >
+															<button class='btn-cat-page menu-item__cat'>
+																<h4>Перейти</h4>
+															</button>
+														</a>
+													</div>
+													
+													
+												
+											<%}%>	
+										<%}%>		
+									<%}%>								
+								</div>							
+							</div>
+						</div>
+					
+				</div>
+		
+		
+
+		
+    		
+
+
+			
+		<div style="margin-bottom:4%"></div>
+		<div class="footer">
+			<div class="main-finder page__main-finder main-finder--style-f-first">
+				<div class="text-faded">
+					<ul class="menu-list main-nav__menu-list">
+						<li class="col-mdf-2 text--menu">
+							<a href="#">
+								<h4 class="text--center text--menu--text">Более 12 млн. наименованиий</h4>
+							</a>
+						</li>
+						<li class="col-mdf-2 text--menu">
+							<a href="#">
+								<h4 class="text--center text--menu--text">Удобные варианты отгрузки</h4>
+							</a>
+						</li>
+						<li class="col-mdf-2 text--menu">
+							<a href="#">
+								<h4 class="text--center text--menu--text">Система лояльности</h4>
+							</a>
+						</li>
+						<li class="col-mdf-2 text--menu">
+							<a href="#">
+								<h4 class="text--center text--menu--text">Возврат и обмен товара</h4>
+							</a>
+						</li>
+						<li class="col-mdf-2 text--menu">
+							<a href="#">
+								<h4 class="text--center text--menu--text">Возможность оплачивать где, и как угодно</h4>
+							</a>
+						</li>
+						<li class="col-mdf-2 text--menu">
+							<a href="#">
+								<h4 class="text--center text--menu--text">Работаем круглосуточно</h4>
+							</a>
+						</li>	
+						<li class="col-mdf-2 text--menu">
+							<a href="#">
+								<h4 class="text--center text--menu--text">Гарантия от производство</h4>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		
+			<div class="main-finder page__main-finder main-finder--style">
+				<div class="text-faded">
+					<h3>
+						Интернет-магазин бытовой техники и электроники
+					</h3>
+					<h4></h4>
+					<h5>
+						Сегодня, чтобы с уверенностью смотреть в будущее, важно уметь балансировать
+						 между высокой скоростью и наслаждением мгновением, гениальной простотой и 
+						 функциональной сложностью. Интернет-магазин бытовой техники «Технопарк» предлагает
+						  технику и сервис, которые помогают найти баланс и наполняют будни новыми эмоциями. 
+						  Мелкая и крупная бытовая техника представлена в широком ассортименте: от холодильников
+						   и стиральных машин до телевизоров и ноутбуков, от пылесосов и очистителей воздуха 
+						   до мультиварок и духовых шкафов, от обогревателей и кондиционеров до планшетов и 
+						   смартфонов. Приобретенные товары можно сразу оснастить всем необходимым – на сайте 
+						   представлен богатый выбор аксессуаров и сопутствующих товаров. Сервис 
+						   интернет-магазина бытовой техники «Технопарк» строится на принципах оперативности, 
+						   честности и индивидуального подхода к каждому клиенту. Покупки можно оплатить любым 
+						   удобным способом, в том числе картой на сайте и при доставке. Имеется возможность оформить 
+						   кредит on-line. Вы получаете индивидуального менеджера-профессионала, готового ответить на любые 
+						   Ваши вопросы, и выгодные бонусы за каждую покупку. Продажа бытовой техники осуществляется с 
+						   доставкой по Москве, Санкт-Петербургу и другим городам России. Купить бытовую технику можно 
+						   с быстрой доставкой по всей России – в более чем 4000 городов и населенных пунктов.
+					</h5>
+				</div>
+			</div>
+			<div class="main-finder main-finder--style-third col-md-12">
+				<div class="text-faded">
+					<ul class="menu-list main-nav__menu-list">
+						<li class="col-mdf-2 text--menu">
+							<a href="#">
+								<h5 class="text--center text--menu--text">Алматы</h5>
+							</a>
+						</li>
+						<li class="col-md-3 text--menu">
+							<a href="#">
+								<h3 class="text--center text--menu--text">Сервис АИДА</h3>
+							</a>
+						</li>
+						<li class="col-md-3 text--menu">
+							<a href="#">
+								<h3 class="text--center text--menu--text">Помощь и поддержка</h3>
+							</a>
+						</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+			
+	</main>
+	</form>
+	<script src="/libs.min.js" type="text/javascript"></script>
+	<script src="/bootstrap.min.js" type="text/javascript"></script>
+	<script  src="/jquery-ui.min.js" type="text/javascript"></script>
+	<script  src="/main.min.js" type="text/javascript"></script>
+</body>
+</html>

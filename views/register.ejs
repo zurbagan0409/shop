@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/style1.css">
+</head>
+
+<body class="page">
+    <div id="content" class="main-content main__main-content">
+        <div class="clearfix">
+            <div class="tabs">
+                <!--header-->
+                <div class="content-function content-function--style clearfix">
+                    <ul class="tab-links tabs__tab-links tab-links--style">
+                        <li class="tab-links__item"><a href="#tab1" class="tab-link tab-link--style tab-link--active">Физическое лицо</a></li>
+                        <li class="tab-links__item"><a href="#tab2" class="tab-link tab-link--style">Юридическое лицо</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-tabs__container">
+            <div id="tab1" class="horizontal-tabs__content settings-opportunities-grad settings-opportunities-style settings-opportunities-style-height horizontal-tabs-active">
+                <p class="settings-opportunities-heading"></p>
+                <form method="post" action="">
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="lastname" class="settings-opportunities-label">Фамилия</label>
+                    </div>
+                    <input type="text" class="settings-opportunities-input" name="lastname" id="lastname"><br>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="firstname" class="settings-opportunities-label">Имя</label>
+                    </div>
+                    <input type="text" class="settings-opportunities-input" name="firstname" id="firstname"><br>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="mobile_phone" class="settings-opportunities-label">Телефон</label>
+                    </div>
+                    <input type="number" class="settings-opportunities-input" name="mobile_phone" id="mobile_phone" maxlength="11"><br>
+                    <!--<div class="settings-opportunities-containerlabel">
+					<label for="landline_phone" class="settings-opportunities-label">Домашний телефон</label>
+				</div>
+				<input type="number" class="settings-opportunities-input"   name="landline_phone" id="landline_phone" maxlength="11"><br>	 -->
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="email" class="settings-opportunities-label">Логин (E-mail)</label>
+                    </div>
+                    <input type="email" class="settings-opportunities-input" name="email" id="email"><br>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="password1" class="settings-opportunities-label">Пароль</label>
+                    </div>
+                    <input type="password" class="settings-opportunities-input" name="password" id="password1"><br>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="password2" class="settings-opportunities-label">Подтверждение пароля</label>
+                    </div>
+                    <input type="password" class="settings-opportunities-input" name="confirmed_password" id="password2"><br>
+                    <input type="submit" value="СОХРАНИТЬ" class="warehouse-window-content-dropdown-main-input" />
+                </form>
+            </div>
+            <div id="tab2" class="horizontal-tabs__content settings-opportunities-grad settings-opportunities-style settings-opportunities-style-height">
+                <p class="settings-opportunities-heading"></p>
+                <form method="post" action="">
+
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="lastname" class="settings-opportunities-label">Наименование</label>
+                    </div>
+                    <input type="text" class="settings-opportunities-input" name="name" id="lastname"><br>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="iin" class="settings-opportunities-label">ИИН/БИН клиента</label>
+                    </div>
+                    <input type="number" class="settings-opportunities-input" name="bin_iin" id="iin" maxlength="12"><br>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="kbe" class="settings-opportunities-label">КБЕ</label>
+                    </div>
+                    <input type="number" class="settings-opportunities-input" name="" id="kbe"><br>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="account" class="settings-opportunities-label">№ счета</label>
+                    </div>
+                    <input type="number" class="settings-opportunities-input" name="bank_data" id="account"><br>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="code" class="settings-opportunities-label">Адрес</label>
+                    </div>
+                    <input type="number" class="settings-opportunities-input" name="company_address" id="code"><br>
+
+                    <p class="settings-opportunities-heading">Представитель:</p>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="lastname" class="settings-opportunities-label">Фамилия</label>
+                    </div>
+                    <input type="text" class="settings-opportunities-input" name="lastname" id="lastname"><br>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="firstname" class="settings-opportunities-label">Имя</label>
+                    </div>
+                    <input type="text" class="settings-opportunities-input" name="firstname" id="firstname"><br>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="number2" class="settings-opportunities-label">Контактный телефон</label>
+                    </div>
+                    <input type="number2" class="settings-opportunities-input" name="company_phone" id="number2" maxlength="11"><br>
+
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="email" class="settings-opportunities-label">Логин (E-mail)</label>
+                    </div>
+                    <input type="email" class="settings-opportunities-input" name="email" id="email"><br>
+                    <div class="settings-opportunities-containerlabel">
+                        <label for="password1" class="settings-opportunities-label">Пароль</label>
+                    </div>
+                    <input type="password" class="settings-opportunities-input" name="password1" id="password1"><br>
+
+                    <input type="submit" value="СОХРАНИТЬ" class="warehouse-window-content-dropdown-main-input" />
+                </form>
+            </div>
+
+        </div>
+
+
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./js/main1.js"></script>
+</body>
+
+</html>
