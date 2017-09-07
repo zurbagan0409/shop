@@ -15,7 +15,7 @@ var SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // create database, ensure mysql ('sqlite3') in your package.json 
 
-require('events').EventEmitter.defaultMaxListeners = 20;
+
 // configure express 
 var app = express();
 app.use(cookieParser());
@@ -46,10 +46,12 @@ var user_details = require('./routes/user_details');
 var orders_list = require('./routes/orders_list');
 var order_details = require('./routes/order_details');
 var create_order = require('./routes/create_order');
+var build = require('./routes/build');
 var login = require('./routes/login');
 var logout = require('./routes/logout');
-var main = require('./main');
+//var main = require('./main');
 const ctrls = require('./controllers')
+//const catgrs = require('./category')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -78,9 +80,10 @@ app.use('/orders_list', orders_list);
 app.use('/create_order', create_order);
 app.use('/login', login);
 app.use('/logout', logout);
-app.use('/build', main);
-//app.post('/build', ctrls.products);
-//app.post('/build', ctrls.tabb_post);
+app.get('/build', build);
+// app.post('/build', ctrls.products);
+//app.get('/category', ctrls.categories);
+//app.post('/category', ctrls.tabb_post);
 //app.use('/main', main); // de Khan
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
