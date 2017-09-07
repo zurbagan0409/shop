@@ -100,10 +100,11 @@
 								<%for(j=0;j<category.length;j++){%>
 								<%if((subcat[i].category_id==sabb)&&(category[j].id==subcat[i].subcat_id)){%>
 																	
-										<li class="dropdown-list__item dropdown-list__item--style text--left" ><p><%=category[j].name %></p></li>									
+										<a <%='href=/category?prod='+sabb+'&filtr='+category[j].id%>  class="dropdown-list__item dropdown-list__item--style text--left" ><p><%=category[j].name %></p></a>									
 										<%}%>	
 								<%}%>		
 								<%}%>	
+								     <a <%='href=/category?prod='+sabb%>  class="dropdown-list__item dropdown-list__item--style text--left" ><p>все</p></a>
 									</ul>
 								</div>
 							</li>
