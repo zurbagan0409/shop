@@ -95,7 +95,7 @@
 			
 
 			      
-				<div id="<%'tab'+tabb%>" class="tab tab-content__tab tab-content__tab--style tab--active " style="border:0px;">
+				<div id="" class="tab tab-content__tab tab-content__tab--style tab--active " style="border:0px;">
 					
 						<div class="row income-wrapper__row clearfix page">
 							<div class="main-finder col-md-12">
@@ -106,22 +106,14 @@
 											<%for(j=0;j<subcat.length;j++){%>
 												<%if((category[i].id==subcat[j].subcat_id)&&(subcat[j].category_id==tabb)){%>	
 													<div class="col-md-2" style="margin-bottom: 50px;">
-<<<<<<< HEAD
 														<a <%='href=/category?prod='+category[i].id%> >
-=======
-														<a <%='href=/category#tab'+category[i].id%> <%='Onclick=tabb=tab'+category[i].id%> >
->>>>>>> ee0c3e1747b651db2b8fe13d3db6e5ce95ea3741
 															<div class="menu-item__image-position">
 																<img src="catalogue/1.png" alt="Документы" class="menu-item__image menu-item__image--style">
 																<br>
 																<h5 class="text--center"><%=category[i].name %></h5><br>
 															</div>
 														</a>
-<<<<<<< HEAD
 														<a <%='href=/category?prod='+category[i].id%> >
-=======
-														<a <%='href=/category#tab'+category[i].id%> <%='Onclick=tabb=tab'+category[i].id%> >
->>>>>>> ee0c3e1747b651db2b8fe13d3db6e5ce95ea3741
 															<button class='btn-cat-page menu-item__cat'>
 																<h4>Перейти</h4>
 															</button>
