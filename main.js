@@ -18,15 +18,15 @@ extended: true
 app.set('view engine', 'ejs');
 
 
-app.get('/build', ctrls.categories);
+app.get('/', ctrls.categories);
 
 
-app.get('/category', ctrls.products );
-app.post('/category', ctrls.products )
+app.get('/category', ctrls.categories );
+app.gett('/product', ctrls.products )
 
-
+/*
 app.listen(8080, function(){
     console.log('listening to port 8080...')
     
 })
-
+*/

@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-var express = require('express');
-var router = express.Router();
-
-/* GET home page. */
-var sess;
-router.get('/', function(req, res, next) {
-    sess=req.session;
-    /*
-    * Here we have assign the 'session' to 'sess'.
-    * Now we can create any number of session variable we want.
-    * in PHP we do as $_SESSION['var name'].
-    * Here we do like this.
-    */
- //   sess.email = 'as@mk.ru'; // equivalent to $_SESSION['email'] in PHP.
-//    sess.username; // equivalent to $_SESSION['username'] in PHP.
-//Session set when user Request our app via URL
-if(sess.email) {
-/*
-* This line check Session existence.
-* If it existed will do some action.
-*/
-    res.redirect('/profile');
-}
-else {
-    res.render('index');
-}
-
-// debug(sess.email);
- // res.render('index', { title: 'Express1' });
-});
-router.get('/hello', (req,res,next) => {
-//  res.render('index', { title: 'Express' });
-  res.render('index',{title:'Hello World1984!'});
-//  res.render('index',{title:'Hello World1986!'});
-});
-// router.get('/register', (req,res,next) => {
-//  res.render('index', { title: 'Express' });
-//  res.render('register',{askar:'Hello World1986!'});
-// });
-module.exports = router;
-=======
 var express = require('express');
 var router = express.Router();
 
@@ -85,4 +43,3 @@ router.get('/hello', (req,res,next) => {
 // });
 module.exports = router;
     
->>>>>>> ee0c3e1747b651db2b8fe13d3db6e5ce95ea3741

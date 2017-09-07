@@ -2,13 +2,9 @@
 var router = express.Router();
 var Sequelize = require('sequelize');
 var db = require('../models/dbs.js');
-<<<<<<< HEAD
-var database = new db('localhost', 'root', 'admin', 'warehouses');
-=======
 var database = new db();
->>>>>>> ee0c3e1747b651db2b8fe13d3db6e5ce95ea3741
 var sess;
-var bcrypt = require('bcrypt');
+//var bcrypt = require('bcrypt');
 database.con.sync();
 // var app.use(express.bodyParser());
 var session = require('express-session');
@@ -30,11 +26,7 @@ router.use(expressValidator());
  router.get('/', (req,res,next) => {
 //var order_types=['test1','test2'];
     database.Order_types.findAll().forEach(function(order_type){    
-<<<<<<< HEAD
-console.log(order_type.name);
-=======
 console.log(order_type.id);
->>>>>>> ee0c3e1747b651db2b8fe13d3db6e5ce95ea3741
 });
 // eate_order', { order_types:order_types });
 

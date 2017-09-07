@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 const sqlize = new Sequelize(`${config.engine}://${config.username}:${config.password}@${config.host}/${config.database}`)
 
 var exports = module.exports ={}
-exports.Products = sqlize.define('aproducts' ,{
+exports.Products = sqlize.define('products' ,{
     name: Sequelize.STRING,
     width: Sequelize.FLOAT,
     height: Sequelize.FLOAT,

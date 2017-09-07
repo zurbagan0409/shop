@@ -2,19 +2,11 @@ var express = require('express');
 var router = express.Router();
 var Sequelize = require('sequelize');
 var db = require('../models/dbs.js');
-<<<<<<< HEAD
-var database = new db('localhost', 'root', 'admin', 'warehouses');
-var bcrypt = require('bcrypt');
-// var app.use(express.bodyParser());
-var session = require('express-session');
-database.con.sync();
-=======
 var database = new db();
 database.con.sync();
-var bcrypt = require('bcrypt');
+// var bcrypt = require('bcrypt');
 // var app.use(express.bodyParser());
 var session = require('express-session');
->>>>>>> ee0c3e1747b651db2b8fe13d3db6e5ce95ea3741
 router.get('/', (req,res,next) => {
     var sess = req.session;
     var orders = database.Orders.findAll({
