@@ -12,7 +12,7 @@ router.get('/', (req,res,next) => {
     var orders = database.Orders.findAll({
   attributes: ['id', 'document_no', 'document_date', 'order_status_id', 'order_types_id', 'contragent_id', 'client_id', 'user_id'],
   where: {client_id:sess.client_id}
-},).then(function(orders){
+}).then(function(orders){
 	 
  	 res.render('orders_list', { orders : orders });
 });	// then

@@ -74,7 +74,7 @@ class DBS {		// database with Sequelize
   },
   userId: Sequelize.STRING,
   expires: Sequelize.DATE,
-  data: Sequelize.STRING(50000)
+  data: Sequelize.STRING(21845)
 },{timestamps: false});
 var extendDefaultFields= function(defaults, session){
   return {
