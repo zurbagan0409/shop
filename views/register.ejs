@@ -1,9 +1,31 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <link rel="stylesheet" type="text/css" href="./css/style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        /*
+                $(document).ready(function(){
+                    $("#cbIsCompany").change(function(){
+                     alert(document.getElementById('cbIsCompany').style.visibility);   
+                        if (document.getElementById('cbIsCompany').style.visibility === "hidden" )
+                            $("#company_data").show()
+                        else
+                            $("#company_data").hide()
+                    });
+                });
+                */
+        function myFunction() {
+            var x = document.getElementById('company_data');
+            if (x.style.display === 'block') {
+                //        alert(document.getElementById('cbIsCompany').style.display);   
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+    </script>
 </head>
 
 <body class="page">
@@ -115,69 +137,3 @@
 </body>
 
 </html>
-=======
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Register</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script>
-        /*
-        $(document).ready(function(){
-            $("#cbIsCompany").change(function(){
-             alert(document.getElementById('cbIsCompany').style.visibility);   
-                if (document.getElementById('cbIsCompany').style.visibility === "hidden" )
-                    $("#company_data").show()
-                else
-                    $("#company_data").hide()
-            });
-        });
-        */
-        function myFunction() {
-    var x = document.getElementById('company_data');
-    if (x.style.display === 'block') {
-//        alert(document.getElementById('cbIsCompany').style.display);   
-        x.style.display = 'none';
-    } else {
-        x.style.display = 'block';
-    }
-}
-        </script>
-    </head>
-    <body>
-        <h1>Register</h1>
-        <a href="/">Index</a>
-        <a href="/login">Login</a>
-        <br><br>
-        <form action="/register" method="post">
-            <label for="firstname">Имя : </label><br>
-            <input type="text" name="firstname" placeholder="Имя..."><br>
-            <label for="lastname">Фамилия : </label><br>
-            <input type="text" name="lastname" placeholder="Фамилия..."><br>
-            <label for="email">Email : </label><br>
-            <input type="text" name="email" placeholder="test@example.com"><br>
-            <label for="password">Пароль : </label><br>
-            <input type="password" name="password" placeholder="Password..."><br>
-            <label for="confirmed_password">Подтвержденный пароль : </label><br>
-            <input type="password" name="confirmed_password" placeholder="Password..."><br>
-            <label for="name">Name : </label><br>
-            <input type="text" name="name" placeholder="Name..."><br>
-            <input type="checkbox" name="cbIsCompany" id="cbIsCompany" value="Company" onchange="myFunction()"  > Юридическое лицо?<br>
-            <div id='company_data' >
-                <label for="company">Company : </label><br>
-                <input type="text" name="company_name" placeholder="Company name..."><br>
-                <input type="text" name="bank_data" placeholder="Bank data..."><br>
-                <input type="text" name="company_address" placeholder="Company address..."><br>
-                <input type="text" name="company_phone" placeholder="Company phone..."><br>
-                <input type="text" name="company_decription" placeholder="Company description..."><br>
-                <input type="text" name="bin_iin" placeholder="bin_iin..."><br>
-            </div>
-            <input type="submit">
-            <p>If you click on the "Hide" button, I will disappear.</p>
-            
-            <button id="hide">Hide</button>
-            <button id="show">Show</button>
-            </form>
-    </body>
-</html>
->>>>>>> ee0c3e1747b651db2b8fe13d3db6e5ce95ea3741

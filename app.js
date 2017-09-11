@@ -46,7 +46,7 @@ var user_details = require('./routes/user_details');
 var orders_list = require('./routes/orders_list');
 var order_details = require('./routes/order_details');
 var create_order = require('./routes/create_order');
-var build = require('./routes/build');
+// var build = require('./routes/build');
 var login = require('./routes/login');
 var logout = require('./routes/logout');
 //var main = require('./main');
@@ -80,10 +80,9 @@ app.use('/orders_list', orders_list);
 app.use('/create_order', create_order);
 app.use('/login', login);
 app.use('/logout', logout);
-app.get('/build', build);
-// app.post('/build', ctrls.products);
-//app.get('/category', ctrls.categories);
-//app.post('/category', ctrls.tabb_post);
+app.get('/build', ctrls.categories);
+app.get('/category', ctrls.products );
+app.post('/category', ctrls.products )
 //app.use('/main', main); // de Khan
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -100,7 +99,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = {};
   console.log(err.message);
   console.log(  console.error(err.stack));
-  res.sendStatus(500).send('Something broke!');
+//  res.sendStatus(500).send('Something broke!');
 
   // render the error page
   res.status(err.status || 500);
