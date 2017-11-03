@@ -16,7 +16,7 @@ var SequelizeStore = require('connect-session-sequelize')(session.Store);
 // create database, ensure mysql ('sqlite3') in your package.json 
 
 
-// configure express 
+// configure express test git in VSC
 var app = express();
 app.use(cookieParser());
 
